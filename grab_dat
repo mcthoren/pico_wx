@@ -1,0 +1,17 @@
+#!/bin/sh
+
+# intended to be run once a minute or so from cron
+
+dat_dir='/home/ghz/pico0x00/data'
+day="$(date -u +%F)"
+year="$(date -u +%Y)"
+dat_path="${dat_dir}/${year}"
+dat_f="${dat_path}/pico0x00.${day}"
+
+[ -d "${dat_path}" ] || mkdir -p "${dat_path}"
+[ -d "${dat_path}" ] || {
+	echo "could not create data directory"
+	exit 1
+}
+
+(date -u +%FT%T%Z; wget -qO - http://pico0x00:5000) | paste - - >> "${dat_f}"
