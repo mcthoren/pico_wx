@@ -1,4 +1,12 @@
 # -*- coding: utf-8 -*-
+#
+# this was cribbed largely from:
+# https://learn.adafruit.com/pico-w-wifi-with-circuitpython?view=all
+# my changes are coverd under the MIT lic file that should be with this file.
+#
+# everything not modified by me is copywritten as follows:
+# SPDX-FileCopyrightText: 2022 Liz Clark for Adafruit Industries
+#
 # once again thanks to Adafruit for all the boards, code, and examples. :)
 
 import time, board, busio, adafruit_veml7700, adafruit_bme680, os, ipaddress, wifi, socketpool

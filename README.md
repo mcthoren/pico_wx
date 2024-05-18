@@ -2,6 +2,9 @@
 ##### Many thanks to Adafruit for all the wonderful docs, boards, and examples.
 
 * This uses the following boards:
+  * A Raspberry Pi Pico W
+    * [Raspberry Pi Docs](https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html)
+    * [Adafruit Docs](https://learn.adafruit.com/pico-w-wifi-with-circuitpython?view=all)
   * An Adafruit VEML7700 breakout board.
     * [Datasheet](https://www.vishay.com/docs/84286/veml7700.pdf)
     * [Adafruit Docs](https://learn.adafruit.com/adafruit-veml7700?view=all)
