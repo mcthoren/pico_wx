@@ -1,5 +1,5 @@
 #### This is a project for using a Raspberry Pi Pico to do lower power versoin of the WX stations I have on PI Ws.
-### Many thanks to Adafruit for all the wonderful docs, boards, and examples.
+##### Many thanks to Adafruit for all the wonderful docs, boards, and examples.
 
 * This uses the following boards:
   * An Adafruit VEML7700 breakout board.
