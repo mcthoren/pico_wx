@@ -34,7 +34,6 @@ server = Server(pool, "/static", debug = bool(debug))
 
 try: # start web server
     server.start(host = str(wifi.radio.ipv4_address), port = 80)
-    print("Listening on http://%s:80" % wifi.radio.ipv4_address)
 except OSError: # reboot!
     time.sleep(5)
     print("restarting..")
