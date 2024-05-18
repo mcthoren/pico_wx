@@ -30,10 +30,10 @@ if debug >= 1:
 	print("My IP address is", wifi.radio.ipv4_address)
 	print("starting server..")
 
-server = Server(pool, "/static", debug=True)
+server = Server(pool, "/static", debug = bool(debug))
 
 try: # start web server
-    server.start(str(wifi.radio.ipv4_address))
+    server.start(host = str(wifi.radio.ipv4_address), port = 80)
     print("Listening on http://%s:80" % wifi.radio.ipv4_address)
 except OSError: # reboot!
     time.sleep(5)
