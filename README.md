@@ -1,4 +1,4 @@
-#### This is a project for using a Raspberry Pi Pico to do lower power versions of the WX stations I have on PI Ws.
+#### This is a project for using Raspberry Pi Picos to do lower power versions of the WX stations I have on PI Ws.
 ##### Many thanks to Adafruit for all the wonderful docs, boards, and examples.
 
 * This uses the following boards:
