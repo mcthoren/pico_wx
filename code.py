@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 #
+# SPDX-FileCopyrightText: 2022 Liz Clark for Adafruit Industries
+#
 # this was cribbed largely from:
 # https://learn.adafruit.com/pico-w-wifi-with-circuitpython?view=all
-# my changes are coverd under the MIT lic file that should be with this file.
-#
-# everything not modified by me is copywritten as follows:
-# SPDX-FileCopyrightText: 2022 Liz Clark for Adafruit Industries
+# my changes are covered under the lic file that should be with this code.
+# i understand that (ISC-style) lic to be compatible with the above MIT lic.
 #
 # once again thanks to Adafruit for all the boards, code, and examples. :)
 
