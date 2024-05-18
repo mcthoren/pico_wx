@@ -14,4 +14,4 @@ dat_f="${dat_path}/pico0x00.${day}"
 	exit 1
 }
 
-(date -u +%FT%T%Z; wget -qO - http://pico0x00:5000) | paste - - >> "${dat_f}"
+(date -u +%FT%T%Z; wget -qO - http://pico0x00) | paste - - >> "${dat_f}"
