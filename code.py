@@ -1,9 +1,13 @@
 # -*- coding: utf-8 -*-
 #
-# SPDX-FileCopyrightText: 2022 Liz Clark for Adafruit Industries
+# SPDX-FileCopyrightText: 2022, 2023 Liz Clark for Adafruit Industries
+# SPDX-License-Identifier: MIT
 #
 # this was cribbed largely from:
 # https://learn.adafruit.com/pico-w-wifi-with-circuitpython?view=all
+# and
+# https://learn.adafruit.com/pico-w-http-server-with-circuitpython?view=all
+#
 # my changes are covered under the lic file that should be with this code.
 # i understand that (ISC-style) lic to be compatible with the above MIT lic.
 #
@@ -25,7 +29,6 @@ if debug >= 1:
 	print()
 	print("Connecting to WiFi")
 
-#  connect to your SSID
 wifi.radio.connect(os.getenv('WIFI_SSID'), os.getenv('WIFI_PASSWORD'))
 
 if debug >= 1:
@@ -50,14 +53,13 @@ except OSError: # reboot!
 if debug >= 2:
 	ipv4 = ipaddress.ip_address("9.9.9.9")
 
+# format string to feed to web server
 def sens_string(temp, hum, pres, lux, gas):
 	sens_str = f"temp: {temp:.2f}°C, hum: {hum:.2f}%, pres: {pres:.3f} kPa, lux: {lux:.2f} lx, gas: {gas:.3f} kOhm\n"
 	return sens_str
 
 @server.route("/")
-def base(request: Request):  # pylint: disable=unused-argument
-    #  serve the HTML f string
-    #  with content type text/html
+def base(request: Request):
     return Response(request, f"{sens_string(temp, hum, pres, lux, gas)}", content_type='text/html')
 
 while True:
